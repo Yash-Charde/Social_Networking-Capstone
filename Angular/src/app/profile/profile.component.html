@@ -1,0 +1,40 @@
+<nav class="navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white" href="#">
+            <img src="/assets/images/icon.png" alt="Icon" width="35" height="35" class="d-inline-block align-text-center">
+            Social Connect
+        </a>   
+    </div>
+</nav>
+
+<div class="container-fluid" style="margin-top: 20px; margin-left: 10px; font-family:Verdana, Geneva, Tahoma, sans-serif;">
+    <h2><u><em>Profile Details:</em></u></h2>
+</div>
+<div>
+    <table class="table table-hover" *ngIf="userDetails">
+        <tr>
+            <td><strong>Username:</strong></td>
+            <td>{{userDetails.userName}}</td>
+        </tr>
+        <tr>
+            <td><strong>Fullname:</strong></td>
+            <td>{{userDetails.fullName}}</td>
+        </tr>
+        <tr>
+            <td><strong>Email:</strong></td>
+            <td>{{userDetails.email}}</td>
+        </tr>
+        <tr>
+            <td><strong>Followers:</strong></td>
+            <td>{{userDetails.followers}}</td>
+        </tr>
+        <tr>
+            <td><strong>Following</strong></td>
+            <td>{{userDetails.following}}</td>
+        </tr>
+    </table>
+    <br>
+    <div class="container-fluid button">
+        <button class="btn btn-danger" (click)="logout()">Logout</button>
+    </div>
+</div>

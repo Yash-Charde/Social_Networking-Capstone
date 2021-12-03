@@ -1,0 +1,68 @@
+<nav class="navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white" href="#">
+          <img src="/assets/images/icon.png" alt="App Icon" width="35" height="35" class="d-inline-block align-text-center">
+          Social Connect
+        </a>
+        <div ngbDropdown class="dropdown">
+            <a ngbDropdownToggle class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" style="margin-right: 25px" href="#">
+                <img src="/assets/images/user_icon.png" alt="User Icon" width="35" height="35" class="d-inline-block align-text-center">
+                {{userDetails.userName}}
+            </a>
+            <div class="dropdown-menu" ngbDropdownMenu>
+                <a class="dropdown-item text-black" (click)="getProfile()">Profile</a>
+                <a class="dropdown-item text-black" (click)="logout()">Logout</a>  
+            </div>    
+        </div>
+      </div>
+</nav>
+
+<!-- This is Create Post and View Content div-->
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="post"><em>Share your thoughts with everyone.</em></h4>
+        <button class="btn btn-danger btn-sm" (click)="modal.dismiss()">
+            <span id='close'>X</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form [formGroup]="service.postForm" autocomplete="off">
+            <div class="form-group">
+                <div class="input-group">
+                    <textarea class="form-control" formControlName="Text" appTextareaAutoresize placeholder="Write something here....." maxlength="150" rows="2"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a type="button" class="btn btn-success" (click)="createPost()" (click)="modal.close()" href=#>Post</a>
+            </div>
+        </form>
+    </div>
+</ng-template>
+
+<div class="container-fluid my-5 mx-auto" style="text-align: center;">
+    <button class="btn btn-success" (click)="open(content)">Create Post</button>
+</div>
+
+<div class="center">
+    <button class="btn btn-info my-2" (click)="sort()">{{sortBtnValue}}</button>
+    <table>
+        <tbody *ngFor="let post of allPosts">
+            <tr>
+                <td>
+                    <p id="userName">
+                        <img src="/assets/images/avatar.png" alt="User Icon" width="30" height="30" style="margin-bottom: 5px;">
+                        {{post.userName}}
+                    </p>
+                    <textarea appTextareaAutoresize id="textarea" wrap="hard" cols="82">{{post.text}}</textarea><br/>
+                        <em><small class="form-text text-muted">
+                        Created on {{post.date | date:"dd MMMM yyyy 'at' h:mma"}}
+                    </small></em>
+                    <br/>
+                    {{post.likes}} Like <br/>
+                    <button class="btn btn-small btn-primary btn-sm" (click)="like(post.postId)">{{post.status}}</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,168 @@
+/* 
+
+input.form-control,input.form-control:focus{
+    color: black;
+    border-color: black;
+}
+
+#toast-container > div {
+    opacity:1;
+}
+
+
+
+/* You can add global styles to this file, and also import other style files */
+/* 
+.colum {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+.row::after {
+    clear: both;
+    display: table;
+} */
+
+.middle{
+    align-items: center;
+    padding-left: 50px;
+}
+
+.navbar{
+    background-color: rgb(105, 105, 105);
+}
+
+.left{
+    float: left;
+    padding-right: 10px;
+}
+
+h1 {
+    color: rgb(88, 174, 255);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+div.dropdown-menu {
+    right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    width: 122px;
+}
+
+.nav-link{
+    font-weight: 500;
+}
+
+.navbar-brand {
+    margin-left: 5px;
+    font-weight: 500;
+}
+
+#mandatory {
+    color: #dc3545;
+    font-weight: 500;
+}
+
+input.ng-touched.ng-invalid{
+    border-color: red;
+}
+
+div.form-group.required>label:first-child:after{
+    content:'*';
+    color: #dc3545;
+	padding-left: 5px;
+}
+
+input.form-control,input.form-control:focus{
+    /* background-color: #636b7b; */
+    color: black;
+    border: 1px solid #636b7b;
+
+}
+
+input.form-control:focus{
+    box-shadow: none;
+}
+
+button[type=submit].btn{
+    border-radius: 20px;
+    background-color: #04c582;
+    color: #fff;
+}
+
+div.form-group label:not(.text-danger){
+    color: black;
+    font-weight: 700;
+}
+
+#toast-container > div {
+    opacity:1;
+}
+
+.psw{
+    color: red;
+}
+
+#rad{
+    margin-bottom: 5px;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .wrapped-div {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background: #7cf0ff;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    padding: 0px;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  }
+
+  /* Tabs */
+.tab-header{
+    text-align: center;
+}
+
+  .tab-header h2.active {
+    color: darkblue;
+    border-bottom: 3px solid darkblue;
+  }
+
+  .tab-header h2 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 750;
+    display:inline-block;
+    padding: 30px 40px 10px 40px;
+    cursor: pointer;
+    color: black;
+    /* border-bottom: 3px solid #545d6a; */
+  }
+
+  .tab-header h2:focus {
+      outline: none;
+  }
+
+  form{
+      margin: 0px 16px;
+  }
+
+ div.form-group input.invalid{
+    border: 1px solid #dc3545; 
+ }
+ div.form-group label:first-child{
+    text-transform: uppercase;
+    font-size: 0.9rem;
+ }

@@ -1,0 +1,19 @@
+table {
+    font-family: Arial, sans-serif;
+    width: 60%;
+    border-collapse: collapse;
+    text-align: center;
+    margin-top: 50px;
+}
+
+td {
+    align-items: center;
+    padding: 8px;
+}
+
+.div.button {
+    font-size: 300px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-left: 100px;
+}

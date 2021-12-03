@@ -1,0 +1,26 @@
+<div class="row mt-5 mx-auto middle">
+    <div class="col-md-6">
+        <div class="row mx-auto side-header">
+            <div class="column">
+                <img class="left" src="/assets/images/icon.png" style="width: 20%" alt="User Icon">
+                <h1>Welcome to <strong>Social Connect</strong> at XYZ</h1>
+                <p><em><strong>Here  one can share thoughts and post it for others to read and comment....</strong></em></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="wrapper">
+            <div class="wrapped-div">
+                <div class="tab-header">
+                    <h2 routerLink='/user/login' routerLinkActive='active'>Sign In</h2>
+                    <h2 routerLink='/user/registration' routerLinkActive='active'>Sign Up</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <router-outlet></router-outlet>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </div>
+</div>
